@@ -15,7 +15,7 @@ public class Task {
     private List<String> updateLog;
 
     public Task(String title, String description, LocalDate deadline, Priority priority) {
-        this.id = ++this.nextId;
+        this.id = ++nextId;
         this.title = title;
         this.description = description;
         this.deadline = deadline;
