@@ -1,5 +1,5 @@
 package model;
 
-enum Status {
+public enum Status {
     TODO, INPROGRESS, DONE, CANCELLED
 }
