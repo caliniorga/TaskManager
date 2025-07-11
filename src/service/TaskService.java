@@ -21,17 +21,24 @@ public class TaskService {
         return task;
     }
 
-    // TO DO
-    public List<Task> listTasks() {
-        return null;
-    }
-
-    // TO DO
-    public void updateStatus(int id, String status) {
+    public void listTasks() {
+        for (Task task : this.tasks) {
+            System.out.println("ID = " + task.getId() + ", title: " + task.getTitle());
+        }
 
     }
 
-    // TO DO
+    public void updateStatus(int id, Status status) {
+        for (Task task : this.tasks) {
+            if (task.getId() == id) {
+                task.setStatus(status);
+                break;
+            }
+        }
+
+    }
+
     public void deleteTask(int id) {
+        tasks.removeIf(task -> task.getId() == id);
     }
 }
